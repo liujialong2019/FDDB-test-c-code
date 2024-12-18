@@ -70,21 +70,11 @@ int main(int argc, char* argv[]) {
 
 	// default values for different command-line arguments
 #ifdef _WIN32
-  //string baseDir = "F:/scratch/Data/facesInTheWild/";
-  //string listFile = "F:/scratch/Data/detectionResults/FDDB/imList.txt";
-  //string detFile = "F:/scratch/Data/detectionResults/FDDB/MikolajczykDets.txt";
-  //string annotFile = "F:/scratch/Data/detectionResults/FDDB/ellipseList.txt";
-  //图片路径,可以有子路径
-	string baseDir = "E:\\Object_Detection\\DataSet\\FDDB\\originalPics\\";
-	//图片名称
-	string listFile = "C:\\Users\\liujialong\\Desktop\\MTCNN\\Pytorch-MTCNN-master\\Pytorch-MTCNN-master\\FDDB\\image.txt";
-	//string detFile = "C:\\Users\\liujialong\\Desktop\\MTCNN\\Pytorch-MTCNN-master\\Pytorch-MTCNN-master\\runs\\detect\\exp2\\result.txt";
-	//string detFile = "C:\\Users\\liujialong\\Desktop\\RetinaFace202312\\Retinaface202312\\eval\\FDDB_dets02.txt";
-	//string detFile = "C:\\Users\\liujialong\\Desktop\\RetinaFace202312\\Retinaface202312\\eval\\FDDB_dets_04_05.txt";
-	//string detFile = "C:\\Users\\liujialong\\Desktop\\RetinaFace202406\\Retinaface\\eval\\FDDB_dets_07_09_02.txt";
-	string detFile = "C:\\Users\\liujialong\\Desktop\\RetinaFace202406\\Retinaface\\eval\\FDDB_dets_10_11.txt";
-	//标签名称一个文件夹内
-	string annotFile = "C:\\Users\\liujialong\\Desktop\\MTCNN\\Pytorch-MTCNN-master\\Pytorch-MTCNN-master\\FDDB\\label.txt";
+  
+  string baseDir = "F:/scratch/Data/facesInTheWild/";
+  string listFile = "F:/scratch/Data/detectionResults/FDDB/imList.txt";
+  string detFile = "F:/scratch/Data/detectionResults/FDDB/MikolajczykDets.txt";
+  string annotFile = "F:/scratch/Data/detectionResults/FDDB/ellipseList.txt";
 
 #else
 	string baseDir = "/Users/vidit/scratch/Data/facesInTheWild/";
@@ -104,11 +94,11 @@ int main(int argc, char* argv[]) {
 	// display the matched pairs
 	bool showMatchPairs = false;
 
-	//if(argc == 1)
-	//{
-	//  printUsage();
-	//  return 0;
-	//}
+	if(argc == 1)
+	{
+	  printUsage();
+	  return 0;
+	}
 
 #ifndef _WIN32
   // parse the input
